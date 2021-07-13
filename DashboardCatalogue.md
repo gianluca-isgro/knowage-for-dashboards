@@ -54,7 +54,6 @@ This catalogue, contains some screenshots regarding the dashboards (released and
 ## C.1: Nitrogen Balance Model
 
 ![C1 Dashboard](/screenshots/c1nitrogenbalancemodel1.png)
-![C1 Dashboard](/screenshots/c1nitrogenbalancemodel2.png)
 
 ## C.2: Nutrient and Sowing reccomendation
 

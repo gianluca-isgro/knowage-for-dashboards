@@ -192,6 +192,36 @@ http://localhost:8080/knowage/servlet/AdapterHTTP?PAGE=LoginPage&NEW_SESSION=TRU
 17. Execute the command `docker-compose stop` to stop the instance. That's wont delete your data from the container.
 	* Note: Using again `docker-compose up -d` to start the instance , will reset all the data and configuration made inside Knowage.
 
+## DSS Table
+
+The following table shows, for each **Dashboard (DSS)**, the name, which pilots use it and the datasets name that feed it.
+
+| Component | DSS        | DSS Name                                        | Pilot                   | Datasets Name                                                                    |
+|-----------|------------|-------------------------------------------------|-------------------------|---------------------------------------------------------------------------------|
+| A1        | DSS1.A1    | A1 Plant Yield Estimation                       | 1.1, 1.2, 1.3, 1.4, 3.4 | 4A1.DSS1.FieldBordersLayer, 4A1.DSS1.PredictedFieldValueLayer                   |
+| A2        | DSS2.A2    | A2 Plant Phenology Estimation                   | 3.1                     | 4A2_PhenologyEstimation                                                         |
+| A3        | DSS3.A3    | A3 Plant Stress Detection                       | 1.4                     | 4A3_PlantStressData                                                             |
+| A5        | DSS5.A5    | A5 Estimate Beehive                             | 5.3                     | 4A5_EstimateBeehive                                                             |
+| B1        | DSS1.B1    | B1 Irrigation Management                        | 1.1, 1.2, 1.3, 3.1, 3.2 | 4B1_IrrigationManagement                                                        |
+| C1        | DSS1.C1    | C1 Nitrogen Balance Model                       | 1.3, 1.4, 2.3, 3.1, 3.2 | 4C1_NitrogenBalanceData                                                         |
+| C2        | DSS1.C2.D1 | C2 Nutrient and Sowing recommendation           | 1.3, 1.4, 2.3, 3.1, 3.2 | 4C2_NutrientMonitorZones, 4C2_NutrientMonitorWeather, 4C2_NutrientMonitorParcel |
+| D1        | DSS1.D1    | Emission                                        | 2.1                     | N/A                                                                             |
+| D2        | DSS2.D2    | D2 Field Operation                              | 2.3, 5.1, 5.2           | 4D2_FieldOperation                                                              |
+| D3        | DSS2.D3    | D3 Variable Rate                                | 3.4, 5.1, 5.2           | 4D3_VariableRate                                                                |
+| E1        | DSS1.E1    | E1 Pest Estimation with Sterile Fruit Flies     | 1.1, 1.2, 3.3, 5.1, 5.3 | 4E1_PestEstimation                                                              |
+| E2        | DSS1.E2    | E2 Estimate Temperature-Related Pest Events     | 3.1, 3.3                | 4E2_TempPestEvents                                                              |
+| F1        | DSS1.F1    | F1 Estimate Milk Production                     | 4.1, 4.2, 4.4, 5.4      | 4F1_EstimateMilkProduction                                                      |
+| F2        | DSS2.F2    | F2 Poultry Feeding                              | 4.4, 5.4                | 4F2_PoultryFeeding                                                              |
+| G1        | DSS1.G1.D1 | G1 Estimate Animal Welfare Condition Training   | 4.2, 4.3, 4.4, 5.4      | 4G1.DSS1.AnimalWelfareTraining, 4G1.DSS1.AnimalWelfareMetrics                   |
+| G1        | DSS1.G1.D2 | G1 Estimate Animal Welfare Condition Prediction | 4.2, 4.3, 4.4, 5.4      | 4G1.DSS2.AnimalWelfarePrediction                                                |
+| G2        | DSS1.G2    | G2 Poultry Well Being                           | 4.3, 5.4                | 4G2_PoultryWellBeing                                                            |
+| H1        | DSS1.H1.D1 | H1 Milk Quality Training                        | 4.2                     | 4H1.DSS1.MilkQualityMetrics, 4H1.DSS1.MilkQualityTraining                       |
+| H1        | DSS1.H1.D2 | H1 Milk Quality Prediction                      | 4.2                     | 4H1.DSS2.MilkQualityPrediction                                                  |
+| H2        | DSS1.H2    | H2 Transport Condition                          | 5.1, 5.4                | 4H2_TransportCondition                                                          |
+| I1        | DSS1.I1    | I1 Generic Farm Comparison                      | ALL                     | 4I1_GenericFarmComparison                                                       |
+| I2        | DSS1.I2    | I2 Neighbour Benchmarking                       | ALL                     | 4I2_NeighbourBenchmarking                                                       |
+| I3        | DSS1.I3    | Technology Benchmarking                         | ALL                     | 4I3_TechnologyBenchmarking                                                      |
+
 ## Dataset configuration
 
 Note: The dataset configuration is optional and can be skipped if your component is registered within the BSE.
@@ -204,7 +234,7 @@ Note: The dataset configuration is optional and can be skipped if your component
 
 ![Knowage 2](/screenshots/UserManualImages/ka2.PNG)
 
-3. A list of datasets will be loaded, input your component code into the **search** field to filter the list (i.e. "G2").
+3. A list of datasets will be loaded, input your component code into the **search** field to filter the list (i.e. "G1"). This funtionality will be very useful during the endpoint customization process.
 
 ![Knowage 3](/screenshots/UserManualImages/ka3.PNG)
 
