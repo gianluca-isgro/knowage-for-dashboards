@@ -97,8 +97,8 @@ If this test is not successful, then you must check with the system administrato
 
 4. Copy and paste the content below into the docker-compose file. 
 	* Note: remember to check and change the **image** tag version with the latest one: 
-		* **image: demeterengteam/knowagedb-7.2.0:<mark>v1.13</mark>**
-		* **image: demeterengteam/knowage-7.2.0:<mark>idm-v1.13</mark>**
+		* **image: demeterengteam/knowagedb-7.2.0:<mark>v2.0</mark>**
+		* **image: demeterengteam/knowage-7.2.0:<mark>idm-v2.0</mark>**
 
 *docker-compose.yml:*
 ```
@@ -107,7 +107,7 @@ services:
 
    knowagedb:
       hostname: knowagedb
-      image: demeterengteam/knowagedb-7.2.0:v1.13
+      image: demeterengteam/knowagedb-7.2.0:v2.0
       networks:
          - hostnet
       ports:
@@ -120,7 +120,7 @@ services:
 
    knowage:
       hostname: knowage
-      image: demeterengteam/knowage-7.2.0:idm-v1.13
+      image: demeterengteam/knowage-7.2.0:idm-v2.0
       networks:
          - hostnet
       ports:
