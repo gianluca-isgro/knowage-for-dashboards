@@ -18,7 +18,7 @@ the Knowage for dashboard instance.
 
 ## ACS application registration
 
-1. Sign-up on ACS (follow this guide: **[Demeter user signup and activate](https://gitlab.com/demeterproject/wp3/se/components/acs/-/blob/master/videos/Demeter-user-signup_and_activate.mp4)**)
+1. Sign-up on ACS (follow this guide: **[Demeter user signup and activate](https://github.com/Engineering-Research-and-Development/knowage-for-dashboards/blob/main/video/Demeter-user-signup_and_activate.mp4)**)
 
 2. Sign-in to access the Home page
 
