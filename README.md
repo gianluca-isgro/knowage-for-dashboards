@@ -12,7 +12,7 @@ The new Knowage BD product satisfies the whole spectrum of analytical needs in a
 Knowage suite is realized by Engineering Group - the leading Italian software and services company, 
 with about 8,200 people and more than 40 offices in Italy, Belgium, Republic of Serbia, Norway, Brazil, Argentina, and United States.
 
-| :books: [Documentation](https://knowage-suite.readthedocs.io/en/7.2/) | :page_facing_up: [Site](https://www.knowage-suite.com/site/home/) | :whale: [Docker Hub](https://hub.docker.com/r/demeterengteam/knowagedb-7.2.0) | :dart: [Roadmap](https://gitlab.com/demeterproject/wp4/visualizations/knowagefordashboards/-/blob/master/ROADMAP.md) |
+| :books: [Documentation](https://knowage-suite.readthedocs.io/en/7.2/) | :page_facing_up: [Site](https://www.knowage-suite.com/site/home/) | :whale: [Docker Hub](https://hub.docker.com/r/demeterengteam/knowagedb-7.2.0) | :dart: [Roadmap](https://github.com/Engineering-Research-and-Development/knowage-for-dashboards/blob/main/ROADMAP.md) |
 | --- | --- | --- | --- |
 
 ## Contents
@@ -45,7 +45,7 @@ with about 8,200 people and more than 40 offices in Italy, Belgium, Republic of 
 
 The dashboard catalogue will list all the dashboards currently released on Knowage. 
 
-**[Dashboard Catalogue](https://gitlab.com/demeterproject/wp4/visualizations/knowagefordashboards/-/blob/master/DashboardCatalogue.md)**
+**[Dashboard Catalogue](https://github.com/Engineering-Research-and-Development/knowage-for-dashboards/blob/main/DashboardCatalogue.md)**
 
 ## Dashboard Status Development
 
@@ -206,7 +206,7 @@ http://localhost:8080/knowage/servlet/AdapterHTTP?PAGE=LoginPage&NEW_SESSION=TRU
 
 ## How to use
 
-Please check the **[User Manual](https://gitlab.com/demeterproject/wp4/visualizations/knowagefordashboards/-/blob/master/UserManual.md)**
+Please check the **[User Manual](https://github.com/Engineering-Research-and-Development/knowage-for-dashboards/blob/main/UserManual.md)**
 
 ## Workaround
 
