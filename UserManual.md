@@ -9,18 +9,18 @@ the Knowage for dashboard instance.
 
 ## Contents
 
-* [**ACS application registration**](#acs-application-registration)
+* [**Knowage registration on ACS**](#knowage-registration-on-acs)
 * [**Comunication check between VM and ACS**](#comunication-check-between-vm-and-acs)
 * [**Setup local instance**](#setup-local-instance)
 * [**Dataset configuration**](#dataset-configuration)
 * [**Dashboard execution**](#dashboard-execution)
 * [**Dashboards view by role**](#dashboards-view-by-role)
 
-## ACS application registration
+## Knowage registration on ACS
 
 1. Sign-up on ACS (follow this guide: **[Demeter user signup and activate](https://github.com/Engineering-Research-and-Development/knowage-for-dashboards/blob/main/video/Demeter-user-signup_and_activate.mp4)**)
 
-2. Sign-in to access the Home page
+2. Sign into the **DEMETER Access Control System** to access its **Home page**
 
 3. Into the Home page, simply click the **Register** button or click **applications** on main menu and then the **Register** button.
 
@@ -40,7 +40,7 @@ the Knowage for dashboard instance.
 
 5. Once done, click the **Next** button to move on second step.
 
-6. Here it's possible to choose an icon image. Once done click the **Next** button.
+6. Here it's possible to choose an image to crop (if it's too big) and use as icon. Once done click the **Next** button.
 
 ![ACS Register App 3](/screenshots/UserManualImages/acsstep3.PNG)
 
@@ -52,9 +52,7 @@ the Knowage for dashboard instance.
 
 9. Click **Save** to complete.
 
-10. Now click on the application to open the details, from there it's possible to **edit** or **manage roles**.
-
-![ACS Register App 5](/screenshots/UserManualImages/acsstep5.PNG)
+10. From the details window it's possible to **edit** or **manage roles**.
 
 ![ACS Register App 6](/screenshots/UserManualImages/acsstep6.PNG)
 
@@ -64,7 +62,11 @@ the Knowage for dashboard instance.
 
 ![ACS Register App 7](/screenshots/UserManualImages/acsstep7.PNG)
 
-13. Here it's possible to select the ACS users to grant them access and roles to use our application.
+13. On **All users**, type a valid user name inside the **filter** box.
+
+14. If the user typed is registered on ACS, a result will appear.
+
+15. Select the user to authorize access to Knowage and assign the roles using the **role** dropdown menu.
 
 ![ACS Register App 8](/screenshots/UserManualImages/acsstep8.PNG)
 
@@ -80,6 +82,12 @@ curl --location --request POST 'https://acs.bse.h2020-demeter-cloud.eu:5443/v1/a
 }'
 ```
 
+*for native cmd shell use this:*
+```
+curl --location --request POST "https://acs.bse.h2020-demeter-cloud.eu:5443/v1/auth/tokens"  --header "Content-Type: application/json" ^
+	--data "{ \"name\": \"ACS_MAIL\" , \"password\": \"ACS_PASSWORD\" } "
+```
+
 Put your ACS account mail on **ACS_MAIL** and your ACS password on **ACS_PASSWORD**.
 
 If this test is not successful, then you must check with the system administrator that 
@@ -87,11 +95,13 @@ If this test is not successful, then you must check with the system administrato
 
 ## Setup local instance
 
-1. Visit the docker hub page and check for the latest tag version of the instance:
+1. Follow each of the following links to the Docker Hub and check for the latest tag version of the instance:
 	* **[Knowage](https://hub.docker.com/r/demeterengteam/knowage-7.2.0/tags?page=1&ordering=last_updated)**
 	* **[Knowagedb](https://hub.docker.com/r/demeterengteam/knowagedb-7.2.0/tags?page=1&ordering=last_updated)**
 
-2. Create a **new folder** and name it as your preference.
+![Docker hub tags](/screenshots/UserManualImages/dhubtags.PNG)
+
+2. Create a **new folder** on the machine to host the Knowage application and name it as your preference.
 
 3. Now create a new file inside that folder and rename it as **docker-compose.yml**
 
