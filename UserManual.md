@@ -15,6 +15,8 @@ the Knowage for dashboard instance.
 * [**Dataset configuration**](#dataset-configuration)
 * [**Dashboard execution**](#dashboard-execution)
 * [**Dashboards view by role**](#dashboards-view-by-role)
+* [**Enable a end user to Pilot role**](#enable-a-end-user-to-pilot-role)
+* [**End user view**](#end-user-view)
 
 ## Knowage registration on ACS
 
@@ -98,7 +100,7 @@ If this test is not successful, then you must check with the system administrato
 1. Follow each of the following links to the Docker Hub and check for the latest tag version of the instance:
 	* **[Knowage](https://hub.docker.com/r/demeterengteam/knowage-7.2.0/tags?page=1&ordering=last_updated)**
 	* **[Knowagedb](https://hub.docker.com/r/demeterengteam/knowagedb-7.2.0/tags?page=1&ordering=last_updated)**
-
+	
 ![Docker hub tags](/screenshots/UserManualImages/dhubtags.PNG)
 
 2. Create a **new folder** on the machine to host the Knowage application and name it as your preference.
@@ -306,10 +308,39 @@ Note: The dataset configuration is optional and can be skipped if your component
 
 ![Knowage 13](/screenshots/UserManualImages/ka13.PNG)
 
-3. **Pilot x.y user** login.
+## Enable a end user to Pilot role
 
-![Knowage 14](/screenshots/UserManualImages/ka14.PNG)
+1 Enter in **ACS** with Administrator account
 
-4. View dashboards list for **Pilot x.y user**.
+2 Select **Knowage** Application
 
-![Knowage 15](/screenshots/UserManualImages/ka15.PNG)
+![ACS Register App 9](/screenshots/UserManualImages/1_Select_Knowage.png)
+
+3 Enter in **"manage roles"** pages
+
+![ACS Register App 10](/screenshots/UserManualImages/2_Manage_Roles.png)
+
+4 Press the **"+"** button
+
+![ACS Register App 11](/screenshots/UserManualImages/3_Create_Role_Button.png)
+
+5 Create the **Pilotx.y** role. **The name has to be without space and the inizial P has to be uppercase.** The role in ACS must mach with the role in Knowage  
+
+![ACS Register App 12](/screenshots/UserManualImages/4_Create_New_Pilot_Role.png)
+![Knowage 14](/screenshots/UserManualImages/7_Role_page_in_Knowage.png)
+
+6 Now you can authorize the End User with the corresponding role
+
+![ACS Register App 13](/screenshots/UserManualImages/5_Authorize_Button.png)
+
+![ACS Register App 14](/screenshots/UserManualImages/6_Authorize_End_User.png)
+
+## End user view
+
+1. **Pilot x.y user** login.
+
+![Knowage 15](/screenshots/UserManualImages/ka14.PNG)
+
+2. View dashboards list for **Pilot x.y user**.
+
+![Knowage 16](/screenshots/UserManualImages/ka15.PNG)
